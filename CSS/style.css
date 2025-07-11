@@ -1,3 +1,113 @@
+:root {
+  --blue-light: #e0f2ff;
+  --blue: #90caf9;
+  --blue-dark: #1976d2;
+  --white: #ffffff;
+  --grey: #0f0472;
+}
+
+* {
+  box-sizing: border-box;
+}
+
 body {
-    background-color: aqua;
+  margin: 0;
+  font-family: "Segoe UI", Tahoma, sans-serif;
+  background: var(--blue-light);
+  color: var(--grey);
+  display: flex;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.app-container {
+  background: var(--white);
+  padding: 2rem;
+  border-radius: 1rem;
+  max-width: 500px;
+  width: 100%;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  text-align: center;
+  color: var(--blue-dark);
+}
+
+form {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+form input[type="text"],
+form input[type="date"] {
+  flex: 1;
+  padding: 0.5rem 0.75rem;
+  border: 2px solid var(--blue);
+  border-radius: 0.5rem;
+}
+
+form button {
+  padding: 0.5rem 1rem;
+  background: var(--blue-dark);
+  color: var(--white);
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+}
+form button:hover {
+  background: var(--blue);
+}
+
+.controls {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.controls select,
+.controls input[type="text"] {
+  flex: 1;
+  padding: 0.5rem 0.75rem;
+  border: 2px solid var(--blue);
+  border-radius: 0.5rem;
+}
+
+ul#todo-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.todo-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: var(--blue-light);
+  padding: 0.75rem;
+  border: 1px solid var(--blue);
+  border-radius: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.todo-item.completed .title {
+  text-decoration: line-through;
+  opacity: 0.6;
+}
+
+.todo-item .meta {
+  font-size: 0.8rem;
+  color: var(--grey);
+}
+
+.todo-item button {
+  border: none;
+  background: none;
+  cursor: pointer;
+  margin-left: 0.5rem;
+  color: var(--blue-dark);
+}
+.todo-item button:hover {
+  color: var(--blue);
 }

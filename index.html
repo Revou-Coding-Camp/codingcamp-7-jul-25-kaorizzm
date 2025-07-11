@@ -1,27 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Kaori's To Do List</title>
+    <link rel="stylesheet" href="CSS\style.css" />
+  </head>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>To Do - Kaori</title>
+  <body>
+    <div class="app-container">
+      <h1>Kaori's To Do List</h1>
 
-    <!-- CSS External -->
-    <link rel="stylesheet" href="CSS\style.css">
-</head>
+      <!-- Form input tugas + tanggal -->
+      <form id="todo-form">
+        <input
+          type="text"
+          id="task-input"
+          placeholder="What do you need to do?"
+        />
+        <input type="date" id="date-input" />
+        <button type="submit">Add</button>
+      </form>
 
-<body>
-    <!-- Hero Website -->
-    <header>
-        <h1>To Do List</h1>
-    </header>
-    
-    <main></main>
+      <!-- Kontrol filter -->
+      <div class="controls">
+        <select id="filter-select">
+          <option value="all">All</option>
+          <option value="active">Active</option>
+          <option value="completed">Completed</option>
+        </select>
+        <input
+          type="text"
+          id="search-input"
+          placeholder="Search…"
+          autocomplete="off"
+        />
+      </div>
 
-    <footer>
-        <span>2025 Kaori. All rights reserved</span>
-    </footer>
+      <!-- Daftar tugas -->
+      <ul id="todo-list"></ul>
+    </div>
 
-</body>
-
+    <script src="js\script.js"></script>
+  </body>
 </html>
